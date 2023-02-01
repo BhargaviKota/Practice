@@ -1,0 +1,523 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to left,#0d1d4e,#003fb7 );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 0 25px 25px;
+}
+.nav{
+    width: 100%;
+    /* height: 20vh; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    gap: 20%;
+
+}
+.logo{
+    width: 100px;
+}
+.logo img{
+    width: 100%;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px;   
+}
+a{
+    color:whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+.data{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    gap: 30px; 
+    margin-bottom: 10px;
+}
+.data h1{
+    font-size: 40px;
+    color: whitesmoke;
+}
+.box{
+    width: auto;
+    height: 50px;
+    background-color: whitesmoke;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   padding: 5px 30px;
+}
+ #text{
+    font-size: 30px;
+    color: #061f4e;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    /* position: absolute;
+    top: 5px;
+    right: 50px; */
+    
+ }
+ #text ::after{
+    content: "|";
+    /* position: absolute; */
+    position: sticky;
+    /* top:0px;
+    right: 0px; */
+    width: 1px;
+    height: 10px;
+    border: 1px solid green;
+    animation: blink 0.5s infinite ease; 
+}
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.data p{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.data button{
+    margin-top: 50px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 0;
+    background-color: black;
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media(max-width:1000px){
+    .header{
+        justify-content: flex-start;
+        gap: 30%;
+    }
+    .menu{
+        width: 100%;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to left,#0d1d4e,#003fb7 );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        transform: translatex(100%);
+        transition: 0.5s;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    .navactive{
+        transform: translateX(0%);
+    }
+    .line .one{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .line .two{
+        opacity: 0;
+    }
+    .line .three{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+}
+
+
+@media(max-width:1250px){
+    .logo{
+        width: 80px;
+    }
+}
+/************** header ends **************/
+
+.earn{
+    width: 90%;
+    margin: 10vh auto;
+    box-shadow: 0 0 15px rgb(231, 230, 230) ;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+  
+    
+}
+/* .earn :hover{
+    transform: scale(1.2)
+    transition: .5s;
+}  */
+.info h2{
+   font-size: 45px;
+   font-weight: 600;
+   color: #061f4e;
+}
+.earn .list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+.earn .list hr{
+    width: 500px;
+}
+.earn .list .list1{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+.earn .list .list1 p{
+    font-size: 18px;
+    color: #061f4e;
+}
+
+/*************** Earn ends *************/
+
+.market{
+    margin: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+}
+ .market h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #061f4e;
+}
+.market hr{
+    width: 82%;
+    margin-top: -100px;
+    border: 1px solid #061f4e;
+}
+.market .mobile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 200px; 
+}
+.market .mobile .image{
+    width: 50%;
+}
+.market .mobile .image img{
+    width: 100%;
+}
+.market .mobile .data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+}
+.market .mobile .data h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgba(37, 34, 34);
+}
+.market .mobile .data h2 span{
+    color: #061f4e;
+}
+.market .mobile .data p{
+    font-size: 18px;
+    color: #061f4e;
+}
+.market .mobile .data a{
+    font-size: 18px;
+    color: #061f4e;
+}
+
+.market .laptop{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px; 
+}
+.market .laptop .lapimg{
+    width: 500px;
+}
+.market .laptop .lapimg img{
+    width: 100%;
+}
+.market .laptop  .data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+}
+.market .laptop  .data h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgba(37, 34, 34);
+}
+.market .laptop  .data h2 span{
+    color: #061f4e;
+}
+.market .laptop  .data p{
+   width: 600px;
+    font-size: 18px;
+    color: #061f4e;
+}
+.market .laptop  .data a{
+    font-size: 18px;
+    color: #061f4e;
+}
+.market button{
+    background-color: #061f4e;
+    color: whitesmoke;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 0;
+    border-radius: 40px;
+}
+.market button img{
+    margin-left: 10px;
+}
+
+/************* market ends ***********/
+.survey{
+    width: 100%;
+    margin: 10vh 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+    background-color:#061f4e ;
+    padding: 50px 100px;
+}
+.survey h2{
+    font-size: 50px;
+    font-weight: 500;
+    color: whitesmoke;
+    width: 40%;
+}
+.survey .items{
+    width: 50%;
+    color: #00c79e;;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/************* Survey ends **************/
+
+.good{
+    width: 80%;
+    margin:5rem auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 100px;
+}
+.good .business{
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+}
+.good .business h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #053387;
+}
+.good .business .free{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.good .business .free p{
+    font-size: 18px;
+    color: #053387;
+    width: 100%;
+}
+.good .business  hr{
+    width: 100%;
+}
+
+/************** Good ends ***********/
+.future{
+    width: 100%;
+    background-color: #061f4e;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.future p{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.future h2{
+    font-size: 40px;
+    color: whitesmoke;
+}
+.future button{
+    padding: 10px 30px;
+    background-color: #061f4e;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(156, 154, 154);
+    color: whitesmoke;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+.future button img{
+    margin-left: 10px;
+}
+
+/*********** future ends ***********/
+
+.footer{
+    width: 100%;
+    background: linear-gradient(to left,#010c2e,#003fb7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px 30px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+}
+.footer .top{
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    gap: 200px;
+    position: relative;
+}
+.footer .top .first{
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
+.footer .top .first .company{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.footerlogo{
+    width: 150px;
+}
+.footerlogo img{
+    width: 100%;
+}
+.footer .top .first .company h2{
+    font-size: 25px;
+    color: whitesmoke;
+    /* letter-spacing: 2px; */
+    font-weight: 500;
+}
+.footer .top .second{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    position: relative;
+}
+.footer .top .second .signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+.footer .top .second .signup h2{
+    font-size: 25px;
+    color: whitesmoke;
+    /* letter-spacing: 2px; */
+    font-weight: 500;
+}
+.footer .top .second .form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+.footer .top .second .form input{
+    padding: 15px 150px 15px 10px;
+    background: #002c6d;
+    border: 0px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+.footer .top .second .form button{
+   padding: 15px 40px;
+   border-radius: 30px;
+   font-size: 20px;
+   border: 0;
+   position: absolute;
+   top: 60px;
+  right: 0px;
+}
+.footer .top .second .mail{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 200px;
+    margin-top: 50px;
+    color: whitesmoke;
+    gap: 10px;
+    font-size: 18px;
+}
+.footer hr{
+    width: 100%;
+}
+.footer .bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 16px;
+}
